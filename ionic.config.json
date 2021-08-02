@@ -1,0 +1,7 @@
+{
+  "name": "ExamenPractico_GuncayJessica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

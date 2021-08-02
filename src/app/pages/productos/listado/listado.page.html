@@ -5,5 +5,29 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-list-header>
+      Productos
+    </ion-list-header>
+    <!-- Crear el ngFor para listar -->
+    <div *ngFor = "let p of productos | async">
+      <ion-item (click)="update(p)">
+        
+        <ion-label>
+          <h2>{{p.nombre}}</h2>
+          <h3>{{p.descripcion}}</h3>
+          <p>{{p.precio}}</p>
+          <p>{{p.url}}</p>
+        </ion-label>
+      </ion-item>
+    </div>
+    </ion-list>
 
-</ion-content>
+    <!--<ion-search showcancelButton="" (ionInput)="filterList($event)"></ion-search>
+    -->
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button (click)="crear()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>

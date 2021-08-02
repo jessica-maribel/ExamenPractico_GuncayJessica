@@ -1,7 +1,10 @@
-export class Contacto{
+export class Productos{
     uid: string;
     nombre: string;
     descripcion: string;
-    precion: string;
-    activo: boolean
+    precio: string;
+    place:string;
+    enabled:boolean;
+    url:string;
+    activo: boolean;
 }

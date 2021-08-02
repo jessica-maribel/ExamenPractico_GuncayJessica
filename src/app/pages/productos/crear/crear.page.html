@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crear</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="fixed">Nombres:</ion-label>
+    <ion-input [(ngModel)]="productos.nombres"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Password:</ion-label>
+    <ion-input [(ngModel)]="productos.contra"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="primary" (click)="save()">
+      Guardar
+    </ion-button>
+  </ion-item>
+
+  <h3>Seleccionar imagen </h3>
+  <input type="file" accept=".png .jpg" (change)="onUpload($event)">
+</ion-content>
